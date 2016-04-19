@@ -12,6 +12,10 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+# require 'support/utilities'
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
@@ -40,6 +44,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
+  config.include Capybara::DSL
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
