@@ -4,6 +4,7 @@ ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'bootstrap-sass'
+gem 'bcrypt-ruby', '3.1.2'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -32,10 +33,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'pg', '0.18.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
   gem 'rspec-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -51,6 +52,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
