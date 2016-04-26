@@ -28,11 +28,13 @@ describe "Static pages" do
     before { visit about_path }
     let(:heading)    { 'About' }
     let(:page_title) { 'About' }
+
     it_should_behave_like "all static pages"
   end
 
   describe "Contact page" do
     before { visit contact_path }
+
     let(:heading)    { 'Contact' }
     let(:page_title) { 'Contact' }
     it_should_behave_like "all static pages"
