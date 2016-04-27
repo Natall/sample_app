@@ -41,6 +41,7 @@ gem 'pg', '0.18.4'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
+  gem 'rspec-its'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   # gem 'web-console', '~> 2.0'
@@ -57,6 +58,7 @@ group :test do
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
 end
+
 
 group :production do
   gem 'rails_12factor', '0.0.2'
