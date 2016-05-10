@@ -1,0 +1,23 @@
+<h1>ToDos</h1>
+<div class="todo-container">
+
+  <%= form_for(@todo) do |f| %>
+      <p> <%= f.text_field :item, :placeholder => "Add new item" %></p>
+      <p> <%= f.submit "Go" %></p>
+  <% end %>
+
+  <ul>
+    <% @todos.each do |todo| %>
+
+          <input type="checkbox" class="checkbox" id="checkbox">
+          <%= todo.item %>
+        </input>
+
+
+    <% end %>
+  </ul>
+</div>
+
+
+
+
