@@ -3,6 +3,7 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready(function() {
+
     $('.change-item').hide();
     $('.check-mark').change(function(event){
         var $form = $(this).parents('form');
