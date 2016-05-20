@@ -23,8 +23,12 @@
       <% end %>
     <% end %>
 
+    <span class="todo-count">
+  <%= pluralize(current_user.todos.count, "item") %>
+    </span>
+
 <%= link_to "All", todos_path, class: 'button'%>
-<%= link_to "Active", todos_active_path,class: 'button'%>
+<%= link_to "Active", active_todos_path,class: 'button'%>
 <%= link_to "Completed", todos_completed_path, class: 'button'%>
 <%= link_to "Clear completed", delete_completed_todos_path, class: 'button'%>
 

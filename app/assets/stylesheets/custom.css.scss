@@ -332,8 +332,10 @@ todo-input:focus {
 
 .button {
   font-size: 14px;
-  padding-left: 30px;
+  padding: 10px 27px;
   color: rgba(135, 69, 114, 0.48);
+  border: 1px solid transparent;
+  border-radius: 3px;
 }
 .button:hover {
   color: #7e1b23;
@@ -354,4 +356,10 @@ todo-input:focus {
 }
 .delete:hover {
   color: #7e1b23;
+}
+
+.todo-count {
+  color: rgba(135, 69, 114, 0.48);
+  padding: 10px 15px;
+
 }

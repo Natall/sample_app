@@ -9,7 +9,9 @@ SampleApp::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  resources :todos,         except: [:show] do  put :delete_completed, on: :collection
+  resources :todos,         except: [:show] do
+    put :delete_completed, on: :collection
+    get :active, on: :collection
   end
 
   root  'static_pages#home'
@@ -19,7 +21,6 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/todos/active', to: 'todos#active', via: 'get'
   match '/todos/completed', to: 'todos#completed', via: 'get'
   match '/todos/delete_completed', to: 'todos#delete_completed', via: 'get'
 

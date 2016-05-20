@@ -50,9 +50,11 @@ class TodosController < ApplicationController
     @todo= Todo.all.where(user_id: current_user.id).where(mark: true)
     @todo.destroy_all
     redirect_to request.referer
-    end
+  end
 
-  private
+
+
+    private
 
   def todo_params
     params.require(:todo).permit(:item, :mark)
